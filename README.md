@@ -10,3 +10,8 @@
 
 1. Jest
 
+
+# ToDO
+
+1. db-migrate
+2. winston

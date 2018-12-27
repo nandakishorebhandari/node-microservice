@@ -1,41 +1,55 @@
 {
-	"name": "node-microservice",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"start": "nodemon  --exec babel-node  ./src/app.js",
-		"debug": "nodemon --inspect=0.0.0.0:9229 --exec babel-node  ./src/app.js",
-		"flow": "flow",
-		"lint": "eslint src/ --ext .js",
-		"eslint-check": "eslint --print-config .eslintrc.json | eslint-config-prettier-check",
-		"build": "babel src/ -d lib/",
-		"test": "jest",
-		"prepublish": "npm run build"
-	},
-	"author": "",
-	"license": "ISC",
-	"devDependencies": {
-		"babel-cli": "^6.26.0",
-		"babel-eslint": "^8.2.6",
-		"babel-jest": "^23.6.0",
-		"babel-preset-flow": "^6.23.0",
-		"eslint": "^5.11.0",
-		"eslint-config-airbnb-base": "^13.1.0",
-		"eslint-config-prettier": "^3.3.0",
-		"eslint-plugin-flowtype": "^3.2.0",
-		"eslint-plugin-import": "^2.14.0",
-		"eslint-plugin-node": "^8.0.0",
-		"eslint-plugin-prettier": "^3.0.0",
-		"eslint-plugin-security": "^1.4.0",
-		"flow-bin": "^0.89.0",
-		"jest": "^23.6.0",
-		"nodemon": "^1.18.9",
-		"prettier": "^1.15.3"
-	},
-	"engines": {
-		"node": "9.10.1"
-	},
-	"dependencies": {
-	}
+  "name": "node-microservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon  --exec babel-node  ./src/index.js",
+    "debug": "nodemon --inspect=0.0.0.0:9229 --exec babel-node  ./src/index.js",
+    "flow": "flow",
+    "lint": "eslint src/ --ext .js",
+    "eslint-check": "eslint --print-config .eslintrc.json | eslint-config-prettier-check",
+    "build": "babel src/ -d dist/",
+    "test": "jest",
+    "prepublish": "npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-flow": "^7.0.0",
+    "babel-eslint": "^8.2.6",
+    "babel-jest": "^23.6.0",
+    "eslint": "^5.11.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-flowtype": "^3.2.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-security": "^1.4.0",
+    "flow-bin": "^0.89.0",
+    "jest": "^23.6.0",
+    "nodemon": "^1.18.9",
+    "prettier": "^1.15.3"
+  },
+  "engines": {
+    "node": ">=9.10.1"
+  },
+  "dependencies": {
+    "config": "^3.0.1",
+    "koa": "^2.6.2",
+    "koa-compress": "^3.0.0",
+    "koa-helmet": "^4.0.0",
+    "koa-morgan": "^1.0.1",
+    "koa-redis-cache": "^3.0.2",
+    "koa2-cors": "^2.0.6",
+    "lodash": "^4.17.11",
+    "mongodb": "^3.1.10",
+    "uuid": "^3.3.2",
+    "winston": "^3.1.0"
+  }
 }

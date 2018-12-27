@@ -8,14 +8,14 @@ module.exports = {
 	extends: [
 		'eslint:recommended',
 		'plugin:security/recommended',
-		'plugin:node/recommended',
+		// 'plugin:node/recommended',
 		'prettier',
 		'plugin:flowtype/recommended',
 		'plugin:prettier/recommended',
 	],
 	plugins: ['prettier', 'flowtype', 'security'],
 	parserOptions: {
-		ecmaVersion: 2018,
+		ecmaVersion: 2019,
 		sourceType: 'module',
 	},
 	rules: {
